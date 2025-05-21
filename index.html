@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iBrace - Segurança Infantil com NFC</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+            header img {
+                height: 60px;
+            }
+
+        .hero {
+            background: linear-gradient(135deg, #0070f3, #0051a3);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        .feature {
+            max-width: 300px;
+            margin: 20px;
+            text-align: center;
+        }
+
+            .feature h3 {
+                color: #0070f3;
+            }
+
+            .feature p {
+                font-size: 0.95rem;
+                color: #555;
+            }
+
+        .cta-button {
+            background-color: #ff6600;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .cta-button:hover {
+                background-color: #e05600;
+            }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: #1f4fa3;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 10px;
+            background-color: #1f4fa3;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+            .btn:hover {
+                background-color: #163b7b;
+            }
+
+        #contact-form {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            #contact-form input, #contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+            }
+
+            #contact-form button {
+                background-color: #1f4fa3;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+
+                #contact-form button:hover {
+                    background-color: #163b7b;
+                }
+
+        footer {
+            background: #1f4fa3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <section class="hero">
+        <img src="iBraceColor.png" alt="iBrace logo" style="width: 148PX;BORDER-RADIUS: 14PX;">
+        <p> Uma pulseira. Várias funções.<br> Segurança, saúde e tranquilidade para toda a família. <br> Com tecnologia NFC que fala por si quando é mais preciso.</p>
+        <a class="cta-button" href="#" onclick="showContactForm(event)"style="
+            /* margin-top: 49%; */
+            position: absolute;
+            margin-left: -85px;
+            margin-top: 12px;
+        ">Quero Saber Mais
+        </a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Identificação com NFC</h3>
+            <p>Qualquer pessoa pode ler a pulseira e aceder a dados de contacto e instruções seguras.</p>
+        </div>
+        <div class="feature">
+            <h3>Localização do Leitor</h3>
+            <p>Quando a pulseira é lida, é registada a localização de quem a leu (com autorização).</p>
+        </div>
+        <div class="feature">
+            <h3>Sem Aplicações Necessárias</h3>
+            <p>Funciona diretamente através do navegador - simples, rápido e acessível.</p>
+        </div>
+    </section>
+
+    <main>
+        <h1>Páginas das Pulseiras</h1>
+        <p>Cada pulseira tem a sua própria página com dados personalizados da criança.</p>
+        <a href="#" class="btn">Página da Francisca</a>
+        <a href="#" class="btn">Página da Maria Luísa</a>
+        <br>
+        <a href="#" class="btn" onclick="showContactForm(event)">📩 Contactar</a>
+        
+        <div id="contact-form">
+            <div class="container">
+          <h2>Fale connosco</h2>
+          <form target="_blank" action="https://formsubmit.co/joaopcmachado46@gmail.com" method="POST">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="col">
+                  <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Enviar</button>
+          </form>
+        </div>
+            
+    </main>
+
+    <footer>
+        &copy; 2025 iBrace. Todos os direitos reservados.
+    </footer>
+</body>
+
+<script>
+    function showContactForm(event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+        const form = document.getElementById('contact-form');
+        form.style.display = 'block';
+        form.scrollIntoView({ behavior: 'smooth' }); // Scroll suave até o formulário
+    }
+</script>
+</html>
